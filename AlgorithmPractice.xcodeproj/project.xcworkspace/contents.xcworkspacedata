@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ArithmeticPractice.xcodeproj">
+      location = "self:/Users/tsuf/Desktop/workspace/ArithmeticPractice/AlgorithmPractice.xcodeproj">
    </FileRef>
 </Workspace>

@@ -27,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		839A2EBF2375533600F9437F /* ArithmeticPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArithmeticPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		839A2EBF2375533600F9437F /* AlgorithmPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgorithmPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839A2EC22375533600F9437F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		839A2EC42375533600F9437F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		839A2EC62375533600F9437F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,7 +35,7 @@
 		839A2ECB2375533A00F9437F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		839A2ECE2375533A00F9437F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		839A2ED02375533A00F9437F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		839A2ED52375533A00F9437F /* ArithmeticPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArithmeticPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		839A2ED52375533A00F9437F /* AlgorithmPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		839A2EDB2375533A00F9437F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		839A2EE52375541200F9437F /* ArrayChapter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayChapter1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,8 +70,8 @@
 		839A2EC02375533600F9437F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				839A2EBF2375533600F9437F /* ArithmeticPractice.app */,
-				839A2ED52375533A00F9437F /* ArithmeticPracticeTests.xctest */,
+				839A2EBF2375533600F9437F /* AlgorithmPractice.app */,
+				839A2ED52375533A00F9437F /* AlgorithmPracticeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		839A2EBE2375533600F9437F /* ArithmeticPractice */ = {
+		839A2EBE2375533600F9437F /* AlgorithmPractice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 839A2EDE2375533A00F9437F /* Build configuration list for PBXNativeTarget "ArithmeticPractice" */;
+			buildConfigurationList = 839A2EDE2375533A00F9437F /* Build configuration list for PBXNativeTarget "AlgorithmPractice" */;
 			buildPhases = (
 				839A2EBB2375533600F9437F /* Sources */,
 				839A2EBC2375533600F9437F /* Frameworks */,
@@ -130,14 +130,14 @@
 			);
 			dependencies = (
 			);
-			name = ArithmeticPractice;
+			name = AlgorithmPractice;
 			productName = ArithmeticPractice;
-			productReference = 839A2EBF2375533600F9437F /* ArithmeticPractice.app */;
+			productReference = 839A2EBF2375533600F9437F /* AlgorithmPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		839A2ED42375533A00F9437F /* ArithmeticPracticeTests */ = {
+		839A2ED42375533A00F9437F /* AlgorithmPracticeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 839A2EE12375533A00F9437F /* Build configuration list for PBXNativeTarget "ArithmeticPracticeTests" */;
+			buildConfigurationList = 839A2EE12375533A00F9437F /* Build configuration list for PBXNativeTarget "AlgorithmPracticeTests" */;
 			buildPhases = (
 				839A2ED12375533A00F9437F /* Sources */,
 				839A2ED22375533A00F9437F /* Frameworks */,
@@ -148,9 +148,9 @@
 			dependencies = (
 				839A2ED72375533A00F9437F /* PBXTargetDependency */,
 			);
-			name = ArithmeticPracticeTests;
+			name = AlgorithmPracticeTests;
 			productName = ArithmeticPracticeTests;
-			productReference = 839A2ED52375533A00F9437F /* ArithmeticPracticeTests.xctest */;
+			productReference = 839A2ED52375533A00F9437F /* AlgorithmPracticeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -172,7 +172,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 839A2EBA2375533600F9437F /* Build configuration list for PBXProject "ArithmeticPractice" */;
+			buildConfigurationList = 839A2EBA2375533600F9437F /* Build configuration list for PBXProject "AlgorithmPractice" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -185,8 +185,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				839A2EBE2375533600F9437F /* ArithmeticPractice */,
-				839A2ED42375533A00F9437F /* ArithmeticPracticeTests */,
+				839A2EBE2375533600F9437F /* AlgorithmPractice */,
+				839A2ED42375533A00F9437F /* AlgorithmPracticeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,7 +235,7 @@
 /* Begin PBXTargetDependency section */
 		839A2ED72375533A00F9437F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 839A2EBE2375533600F9437F /* ArithmeticPractice */;
+			target = 839A2EBE2375533600F9437F /* AlgorithmPractice */;
 			targetProxy = 839A2ED62375533A00F9437F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -424,7 +424,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArithmeticPractice.app/ArithmeticPractice";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlgorithmPractice.app/AlgorithmPractice";
 			};
 			name = Debug;
 		};
@@ -446,14 +446,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArithmeticPractice.app/ArithmeticPractice";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlgorithmPractice.app/AlgorithmPractice";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		839A2EBA2375533600F9437F /* Build configuration list for PBXProject "ArithmeticPractice" */ = {
+		839A2EBA2375533600F9437F /* Build configuration list for PBXProject "AlgorithmPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				839A2EDC2375533A00F9437F /* Debug */,
@@ -462,7 +462,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		839A2EDE2375533A00F9437F /* Build configuration list for PBXNativeTarget "ArithmeticPractice" */ = {
+		839A2EDE2375533A00F9437F /* Build configuration list for PBXNativeTarget "AlgorithmPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				839A2EDF2375533A00F9437F /* Debug */,
@@ -471,7 +471,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		839A2EE12375533A00F9437F /* Build configuration list for PBXNativeTarget "ArithmeticPracticeTests" */ = {
+		839A2EE12375533A00F9437F /* Build configuration list for PBXNativeTarget "AlgorithmPracticeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				839A2EE22375533A00F9437F /* Debug */,
