@@ -59,11 +59,24 @@ class ArrayChapter1: XCTestCase {
   
   func testPlusOneOfNums() {
     func plusOne(_ digits: [Int]) -> [Int] {
-      let lastNum = digits.last!
-      if lastNum < 9 {
-        
+      var newDigits = digits
+      var index = digits.count - 1
+      var num = digits.last!
+      while index >= 0 {
+        if num < 9 {
+          newDigits[index] = num + 1
+          break
+        } else {
+          newDigits[index] = 0
+          if index == 0 {
+            newDigits.insert(1, at: 0)
+            break
+          }
+          index -= 1
+          num = digits[index]
+        }
       }
-      return []
+      return newDigits
     }
     
     XCTAssertEqual(plusOne([1]), [2])
