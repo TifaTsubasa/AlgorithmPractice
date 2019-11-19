@@ -103,20 +103,16 @@ class ArrayChapter4: XCTestCase {
         func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
             if nums.count == 0 { return 0 }
             var max = 0
-            var left = 0
-            var right = 0
-            while right < nums.count {
-                if nums[right] == 0 {
-                    let offset = right - left
-                    if offset > max { max = offset }
-                    right += 1
-                    left = right
+            var count = 0
+            for i in 0..<(nums.count) {
+                if nums[i] == 1 {
+                    count += 1
                 } else {
-                    right += 1
+                    if count > max { max = count }
+                    count = 0
                 }
             }
-            let offset = right - left
-            if offset > max { max = offset }
+            if count > max { max = count }
             return max
         }
         XCTAssertEqual(findMaxConsecutiveOnes([1,1,0,1,1,1]), 3)
@@ -126,10 +122,24 @@ class ArrayChapter4: XCTestCase {
         XCTAssertEqual(findMaxConsecutiveOnes([0, 1]), 1)
     }
     
-    func test() {
+    func testMinSubArrayLen() {
         func minSubArrayLen(_ s: Int, _ nums: [Int]) -> Int {
-            return 0
+            var min = nums.count + 1
+            var left = 0
+            var sum = 0
+            for i in 0..<(nums.count) {
+                sum += nums[i]
+                while sum >= s {
+                    let count = i - left + 1
+                    if count < min { min = count }
+                    sum -= nums[left]
+                    left += 1
+                }
+            }
+            return (min > nums.count) ? 0 : min
         }
+        XCTAssertEqual(minSubArrayLen(7, []), 0)
+        XCTAssertEqual(minSubArrayLen(7, [4,3]), 2)
         XCTAssertEqual(minSubArrayLen(7, [2,3,1,2,4,3]), 2)
         XCTAssertEqual(minSubArrayLen(7, [3,4,1,2,2,3]), 2)
         XCTAssertEqual(minSubArrayLen(20, [2,3,1,2,4,3]), 0)
