@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83369730238526B2000247EC /* ArrayChapter5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336972F238526B2000247EC /* ArrayChapter5.swift */; };
 		8337E911237E92C000B85EDB /* ArrayChapter3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337E910237E92C000B85EDB /* ArrayChapter3.swift */; };
 		839A2EC32375533600F9437F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A2EC22375533600F9437F /* AppDelegate.swift */; };
 		839A2EC52375533600F9437F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A2EC42375533600F9437F /* SceneDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8336972F238526B2000247EC /* ArrayChapter5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayChapter5.swift; sourceTree = "<group>"; };
 		8337E910237E92C000B85EDB /* ArrayChapter3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayChapter3.swift; sourceTree = "<group>"; };
 		839A2EBF2375533600F9437F /* AlgorithmPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgorithmPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839A2EC22375533600F9437F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				83A885D5237C0115008134EB /* ArrayChapter2.swift */,
 				8337E910237E92C000B85EDB /* ArrayChapter3.swift */,
 				D6B11E26238195C2007E6CB3 /* ArrayChapter4.swift */,
+				8336972F238526B2000247EC /* ArrayChapter5.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			files = (
 				D6B11E27238195C2007E6CB3 /* ArrayChapter4.swift in Sources */,
 				8337E911237E92C000B85EDB /* ArrayChapter3.swift in Sources */,
+				83369730238526B2000247EC /* ArrayChapter5.swift in Sources */,
 				83A885D6237C0115008134EB /* ArrayChapter2.swift in Sources */,
 				839A2EE62375541200F9437F /* ArrayChapter1.swift in Sources */,
 			);
