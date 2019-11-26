@@ -175,4 +175,30 @@ class ArrayChapter5: XCTestCase {
         XCTAssertEqual(removeDuplicates(&num4), 0)
         XCTAssertEqual(num4, [])
     }
+    
+    func testMoveZeroes() {
+        func moveZeroes(_ nums: inout [Int]) {
+            var zeroes: [Int] = []
+            var index = 0
+            while index < nums.count {
+                let num = nums[index]
+                if num == 0 {
+                    zeroes.append(num)
+                    nums.remove(at: index)
+                } else {
+                    index += 1
+                }
+            }
+            nums.append(contentsOf: zeroes)
+        }
+        var num1 = [0,1,0,3,12]
+        moveZeroes(&num1)
+        var num2: [Int] = []
+        moveZeroes(&num2)
+        var num3 = [1, 3,12]
+        moveZeroes(&num3)
+        XCTAssertEqual(num1, [1,3,12,0,0])
+        XCTAssertEqual(num2, [])
+        XCTAssertEqual(num3, [1, 3,12])
+    }
 }
