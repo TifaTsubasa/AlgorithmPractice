@@ -146,4 +146,33 @@ class ArrayChapter5: XCTestCase {
         XCTAssertEqual(reverseWords("Let's take LeetCode contest"), "s'teL ekat edoCteeL tsetnoc" )
         XCTAssertEqual(reverseWords(" Let's  take LeetCode contest "), "s'teL ekat edoCteeL tsetnoc" )
     }
+    
+    func testRemoveDuplicates() {
+        func removeDuplicates(_ nums: inout [Int]) -> Int {
+            if nums.count <= 1 { return nums.count }
+            var index = 1
+            var value = nums.first!
+            for i in 1..<(nums.count) {
+                let num = nums[i]
+                if num > value {
+                    nums[index] = num
+                    index += 1
+                    value = num
+                }
+            }
+            return index
+        }
+        var num1 = [1,1,2]
+        var num2 = [0,0,1,1,1,2,2,3,3,4]
+        var num3 = [0]
+        var num4: [Int] = []
+        XCTAssertEqual(removeDuplicates(&num1), 2)
+        XCTAssertEqual(num1.prefix(2), [1, 2])
+        XCTAssertEqual(removeDuplicates(&num2), 5)
+        XCTAssertEqual(num2.prefix(5), [0, 1, 2, 3, 4])
+        XCTAssertEqual(removeDuplicates(&num3), 1)
+        XCTAssertEqual(num3.prefix(1), [0])
+        XCTAssertEqual(removeDuplicates(&num4), 0)
+        XCTAssertEqual(num4, [])
+    }
 }
