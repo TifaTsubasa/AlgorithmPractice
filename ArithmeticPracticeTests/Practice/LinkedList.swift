@@ -5,8 +5,6 @@
 //  Created by tsuf on 2019/11/28.
 //  Copyright © 2019 upmer. All rights reserved.
 //
-// start : Thu Nov 28 14:17:50 CST 2019
-// end:
 
 import XCTest
 
