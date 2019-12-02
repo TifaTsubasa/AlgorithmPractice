@@ -74,4 +74,34 @@ class Sort: XCTestCase {
         insertSort(&arr3)
         XCTAssertEqual(arr3, test3.1)
     }
+    
+    func testSelectSort() {
+        func selectSort(_ nums: inout [Int]) {
+            let count = nums.count
+            if count <= 1 { return }
+            for i in 0..<(count - 1) {
+                var minIndex = i
+                var min = nums[i]
+                for j in i..<count {
+                    if min > nums[j] {
+                        min = nums[j]
+                        minIndex = j
+                    }
+                }
+                let tmp = nums[i]
+                nums[i] = nums[minIndex]
+                nums[minIndex] = tmp
+                print(nums)
+            }
+        }
+        var arr1 = test1.0
+        selectSort(&arr1)
+        XCTAssertEqual(arr1, test1.1)
+        var arr2 = test2.0
+        selectSort(&arr2)
+        XCTAssertEqual(arr2, test2.1)
+        var arr3 = test3.0
+        selectSort(&arr3)
+        XCTAssertEqual(arr3, test3.1)
+    }
 }
