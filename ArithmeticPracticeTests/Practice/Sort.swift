@@ -159,30 +159,26 @@ class Sort: XCTestCase {
   
   func testQuickSort() {
     func partition(_ nums: inout [Int], l: Int, r: Int) -> Int {
-        let pivot = nums[l]
-        var less = l
+        print(nums, l, r)
+        if l >= r { return -1 }
+        let value = nums[l]
+        var lessEnd = l // <
         for i in (l + 1)...r {
-            if nums[i] <= pivot {
-                less += 1
-                let tmp = nums[less]
-                nums[less] = nums[i]
-                nums[i] = tmp
+            if nums[i] < value {
+                lessEnd += 1
+                nums.swapAt(lessEnd, i)
             }
         }
-        nums[l] = nums[less]
-        nums[less] = pivot
-        return less
+        nums.swapAt(l, lessEnd)
+        return lessEnd
     }
     
     func quickSort(_ nums: inout [Int], l: Int, r: Int) {
-        let count = nums.count
-        if count <= 1 { return }
+        if nums.count <= 1 { return }
         if l >= r { return }
-        print(nums, l, r)
-        let center = partition(&nums, l: l, r: r)
-        print(center)
-        quickSort(&nums, l: l, r: center)
-        quickSort(&nums, l: center + 1, r: r)
+        let pivot = partition(&nums, l: l, r: r)
+        quickSort(&nums, l: l, r: pivot)
+        quickSort(&nums, l: pivot + 1, r: r)
     }
     
     var arr1 = test1.0
