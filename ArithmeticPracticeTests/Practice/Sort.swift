@@ -156,4 +156,43 @@ class Sort: XCTestCase {
     mergeSort(&arr3, l: 0, r: arr3.count - 1)
     XCTAssertEqual(arr3, test3.1)
   }
+  
+  func testQuickSort() {
+    func partition(_ nums: inout [Int], l: Int, r: Int) -> Int {
+        let pivot = nums[l]
+        var less = l
+        for i in (l + 1)...r {
+            if nums[i] <= pivot {
+                less += 1
+                let tmp = nums[less]
+                nums[less] = nums[i]
+                nums[i] = tmp
+            }
+        }
+        nums[l] = nums[less]
+        nums[less] = pivot
+        return less
+    }
+    
+    func quickSort(_ nums: inout [Int], l: Int, r: Int) {
+        let count = nums.count
+        if count <= 1 { return }
+        if l >= r { return }
+        print(nums, l, r)
+        let center = partition(&nums, l: l, r: r)
+        print(center)
+        quickSort(&nums, l: l, r: center)
+        quickSort(&nums, l: center + 1, r: r)
+    }
+    
+    var arr1 = test1.0
+    quickSort(&arr1, l: 0, r: arr1.count - 1)
+    XCTAssertEqual(arr1, test1.1)
+    var arr2 = test2.0
+    quickSort(&arr2, l: 0, r: arr2.count - 1)
+    XCTAssertEqual(arr2, test2.1)
+    var arr3 = test3.0
+    quickSort(&arr3, l: 0, r: arr3.count - 1)
+    XCTAssertEqual(arr3, test3.1)
+  }
 }
