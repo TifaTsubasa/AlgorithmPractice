@@ -56,4 +56,57 @@ class BSearch: XCTestCase {
         XCTAssertEqual(bsearch_recursion(nums: test1, n: 10), -1)
         XCTAssertEqual(bsearch_recursion(nums: test1, n: 5), 4)
     }
+    
+    func testBSearchFirstValue() {
+        func bsearchFirstValue(nums: [Int], n: Int) -> Int {
+            if nums.count == 0 { return -1 }
+            var low = 0
+            var high = nums.count - 1
+            while low <= high {
+                let mid = low + ((high - low) >> 1)
+                let value = nums[mid]
+                if value == n {
+                    if mid == 0 || nums[mid - 1] != n {
+                        return mid
+                    } else {
+                        high -= 1
+                    }
+                } else if value < n {
+                    low += 1
+                } else {
+                    high -= 1
+                }
+            }
+            return -1
+        }
+        XCTAssertEqual(bsearchFirstValue(nums: test1, n: 10), -1)
+        XCTAssertEqual(bsearchFirstValue(nums: test2, n: 8), 6)
+    }
+    
+    func testBSearchLastValue() {
+        func bsearchLastValue(nums: [Int], n: Int) -> Int {
+            if nums.count == 0 { return -1 }
+            var low = 0
+            var high = nums.count - 1
+            while low <= high {
+                let mid = low + ((high - low) >> 1)
+                let value = nums[mid]
+                if value == n {
+                    if mid == nums.count - 1 || nums[mid + 1] != n {
+                        return mid
+                    } else {
+                        low += 1
+                    }
+                } else if value < n {
+                    low += 1
+                } else {
+                    high -= 1
+                }
+            }
+            return -1
+        }
+        XCTAssertEqual(bsearchLastValue(nums: test2, n: 8), 8)
+    }
+    
+    
 }
