@@ -20,6 +20,7 @@
 		839A2ECF2375533A00F9437F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839A2ECD2375533A00F9437F /* LaunchScreen.storyboard */; };
 		839A2EE62375541200F9437F /* ArrayChapter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A2EE52375541200F9437F /* ArrayChapter1.swift */; };
 		83A885D6237C0115008134EB /* ArrayChapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A885D5237C0115008134EB /* ArrayChapter2.swift */; };
+		D6ACDF1223C8B607007AE0F3 /* KMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACDF1123C8B607007AE0F3 /* KMP.swift */; };
 		D6B11E27238195C2007E6CB3 /* ArrayChapter4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B11E26238195C2007E6CB3 /* ArrayChapter4.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		839A2EDB2375533A00F9437F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		839A2EE52375541200F9437F /* ArrayChapter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayChapter1.swift; sourceTree = "<group>"; };
 		83A885D5237C0115008134EB /* ArrayChapter2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayChapter2.swift; sourceTree = "<group>"; };
+		D6ACDF1123C8B607007AE0F3 /* KMP.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = KMP.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D6B11E26238195C2007E6CB3 /* ArrayChapter4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayChapter4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				836D6CEE238F84C300E12100 /* LinkedList.swift */,
 				836D6D1C2391417F00E12100 /* Sort.swift */,
 				8334FF5B23A8A4520043B917 /* BSearch.swift */,
+				D6ACDF1123C8B607007AE0F3 /* KMP.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6ACDF1223C8B607007AE0F3 /* KMP.swift in Sources */,
 				8334FF5C23A8A4520043B917 /* BSearch.swift in Sources */,
 				836D6CEF238F84C300E12100 /* LinkedList.swift in Sources */,
 				D6B11E27238195C2007E6CB3 /* ArrayChapter4.swift in Sources */,
