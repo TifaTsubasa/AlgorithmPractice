@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		83299CE823DAEC50003F7D5C /* n70.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83299CE723DAEC50003F7D5C /* n70.swift */; };
+		83299CEA23DB0B49003F7D5C /* n62.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83299CE923DB0B49003F7D5C /* n62.swift */; };
 		8332534923D605080068FB0A /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8332534723D604FC0068FB0A /* DynamicProgramming.swift */; };
 		8334FF5C23A8A4520043B917 /* BSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8334FF5B23A8A4520043B917 /* BSearch.swift */; };
 		83369730238526B2000247EC /* ArrayChapter5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336972F238526B2000247EC /* ArrayChapter5.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		83299CE723DAEC50003F7D5C /* n70.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = n70.swift; sourceTree = "<group>"; };
+		83299CE923DB0B49003F7D5C /* n62.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = n62.swift; sourceTree = "<group>"; };
 		8332534723D604FC0068FB0A /* DynamicProgramming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
 		8334FF5B23A8A4520043B917 /* BSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSearch.swift; sourceTree = "<group>"; };
 		8336972F238526B2000247EC /* ArrayChapter5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayChapter5.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				83299CE723DAEC50003F7D5C /* n70.swift */,
+				83299CE923DB0B49003F7D5C /* n62.swift */,
 			);
 			path = 100;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			files = (
 				D6ACDF1223C8B607007AE0F3 /* KMP.swift in Sources */,
 				8334FF5C23A8A4520043B917 /* BSearch.swift in Sources */,
+				83299CEA23DB0B49003F7D5C /* n62.swift in Sources */,
 				836D6CEF238F84C300E12100 /* LinkedList.swift in Sources */,
 				D6B11E27238195C2007E6CB3 /* ArrayChapter4.swift in Sources */,
 				8337E911237E92C000B85EDB /* ArrayChapter3.swift in Sources */,
