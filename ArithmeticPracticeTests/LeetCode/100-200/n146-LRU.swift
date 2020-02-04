@@ -64,8 +64,6 @@ class LRUCache {
             node.value = value
             if node.next?.next == nil { return } // last node
             LRUCacheNode.delete(node: node)
-            LRUCacheNode.insert(node: node, before: tail)
-            return
         }
         if cache.count >= maxCount {
             // delete first
@@ -93,7 +91,6 @@ class LRUCache {
 }
 
 class n146_LRU: XCTestCase {
-
     func testExample() {
         XCTContext.runActivity(named: "0") { _ in
             let cache = LRUCache(0)
