@@ -10,40 +10,6 @@ import XCTest
 
 class n72: XCTestCase {
     
-    /*
-     
-     1 a
-     a 0
-     
-     * b
-     a 1
-     
-     * b b
-     a 1 2
-     
-     * b
-     b 0
-     b 1
-     
-     * a b
-     a 0 1
-     a 0 1
-     
-     * a b a
-     b 1 0 1
-     a 0 1 1
-     
-     * a b a b
-     c 1 2 3 4
-     a 1 2 2 3
-     
-     * h o r s e
-     r 1 2 2 3 4
-     o 2 2 3 4 5
-     s 3 3 4 4 5
-     
-     */
-    
     func minDistance(_ word1: String, _ word2: String) -> Int {
         if word1 == word2 { return 0 }
         if word1.count == 0 { return word2.count }
@@ -88,16 +54,5 @@ class n72: XCTestCase {
         XCTAssertEqual(minDistance("abcdefg", "xbcdx"), 4)
         XCTAssertEqual(minDistance("pneumonoultramicroscopicsilicovolcanoconiosis", "ultramicroscopically"), 27)
     }
-//    pneumono ultramicroscopic si licovo l c anoconiosis
-//             ultramicroscopic a  l      l y
-//    p ult si la l c ee
-//      ult a  l  l y
-    /**
-     
-        0 a b a b
-     0  0 1 2 3 4
-     c  1 1 1 2 0
-     a  2 0 0 0 0
-     */
 
 }
