@@ -107,6 +107,4 @@ class BSearch: XCTestCase {
         }
         XCTAssertEqual(bsearchLastValue(nums: test2, n: 8), 8)
     }
-    
-    
 }
