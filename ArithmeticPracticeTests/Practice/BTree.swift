@@ -8,7 +8,11 @@
 
 import XCTest
 
-class TreeNode {
+class TreeNode: CustomStringConvertible {
+    var description: String {
+        return "\(val)"
+    }
+    
     public var val: Int
     public var left: TreeNode?
     public var right: TreeNode?
@@ -28,14 +32,37 @@ class BTree {
     static func flatTree(root: TreeNode?) -> [Int?] {
         if root == nil { return [] }
         var arr: [Int?] = [Int]()
-        
-        addFlatNode(node: root, to: &arr)
+        var queue: [TreeNode?] = [root]
+        var emptyNodeCount = 0
+        while !queue.isEmpty {
+            print(queue)
+            let count = queue.count
+            if (count > 0) && (((count & (count - 1)) == 0)) && count == emptyNodeCount {
+                break
+            }
+            let firstNode = queue.first
+            arr.append(firstNode??.val)
+            queue.removeFirst()
+            
+            if firstNode??.val == nil {
+                emptyNodeCount -= 1
+            }
+            
+            queue.append(firstNode??.left)
+            if firstNode??.left == nil { emptyNodeCount += 1}
+            queue.append(firstNode??.right)
+            if firstNode??.right == nil { emptyNodeCount += 1}
+        }
         
         return arr
     }
     
     static func addFlatNode(node: TreeNode?, to array: inout [Int?]) {
-        array.append(node?.val)
+        if let val = node?.val {
+            array.append(val)
+        } else {
+            array.append(nil)
+        }
         if node?.left == nil && node?.right == nil { return }
         addFlatNode(node: node?.left, to: &array)
         addFlatNode(node: node?.right, to: &array)
@@ -58,4 +85,5 @@ class BTreeTest: XCTestCase {
         XCTAssertEqual(BTree.flatTree(root: node1), [1, 2, 3, 4, nil, nil, nil])
     }
 
+    
 }
