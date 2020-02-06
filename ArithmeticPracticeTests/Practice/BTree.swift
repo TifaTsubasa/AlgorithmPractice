@@ -24,10 +24,16 @@ class TreeNode: CustomStringConvertible {
 }
 
 class BTree {
-//    static func buildTree(array: [Int]) -> TreeNode? {
-//        if array.count == 0 { return nil }
-//
-//    }
+    static func buildTree(array: [Int?]) -> TreeNode? {
+        if array.first == nil { return nil }
+        let root = TreeNode(array[0]!)
+        var level = [root]
+        for i in 1..<array.count {
+            
+        }
+        
+        return nil
+    }
     
     static func flatTree(root: TreeNode?) -> [Int?] {
         if root == nil { return [] }
@@ -35,9 +41,9 @@ class BTree {
         var queue: [TreeNode?] = [root]
         var emptyNodeCount = 0
         while !queue.isEmpty {
-            print(queue)
             let count = queue.count
-            if (count > 0) && (((count & (count - 1)) == 0)) && count == emptyNodeCount {
+            if (((count & (count - 1)) == 0)) &&
+                count == emptyNodeCount {
                 break
             }
             let firstNode = queue.first
@@ -56,34 +62,59 @@ class BTree {
         
         return arr
     }
-    
-    static func addFlatNode(node: TreeNode?, to array: inout [Int?]) {
-        if let val = node?.val {
-            array.append(val)
-        } else {
-            array.append(nil)
-        }
-        if node?.left == nil && node?.right == nil { return }
-        addFlatNode(node: node?.left, to: &array)
-        addFlatNode(node: node?.right, to: &array)
-    }
 }
 
 class BTreeTest: XCTestCase {
     
     func testFlatBTree() {
-        let node1 = TreeNode(1)
-        let node2 = TreeNode(2)
-        let node3 = TreeNode(3)
-        let node4 = TreeNode(4)
-        
-        node1.left = node2
-        node1.right = node3
-        
-        node2.left = node4
-        
-        XCTAssertEqual(BTree.flatTree(root: node1), [1, 2, 3, 4, nil, nil, nil])
+        XCTContext.runActivity(named: "1, 2, 3, 4, nil, nil, nil") { _ in
+            let node1 = TreeNode(1)
+            let node2 = TreeNode(2)
+            let node3 = TreeNode(3)
+            let node4 = TreeNode(4)
+            
+            node1.left = node2
+            node1.right = node3
+            
+            node2.left = node4
+            
+            XCTAssertEqual(BTree.flatTree(root: node1), [1, 2, 3, 4, nil, nil, nil])
+        }
+        XCTContext.runActivity(named: "1, 2, 3, 4, nil, 5, nil") { _ in
+            let node1 = TreeNode(1)
+            let node2 = TreeNode(2)
+            let node3 = TreeNode(3)
+            let node4 = TreeNode(4)
+            let node5 = TreeNode(5)
+            
+            node1.left = node2
+            node1.right = node3
+            
+            node2.left = node4
+            node3.left = node5
+            
+            XCTAssertEqual(BTree.flatTree(root: node1), [1, 2, 3, 4, nil, 5, nil])
+        }
     }
-
     
+    func testBuildTree() {
+        XCTContext.runActivity(named: "1, 2, 3, 4, nil, nil, nil") { _ in
+            let node = BTree.buildTree(array: [1, 2, 3, 4, nil, nil, nil])
+            XCTAssertEqual(node?.val, 1)
+            XCTAssertEqual(node?.left?.val, 2)
+            XCTAssertEqual(node?.right?.val, 3)
+            XCTAssertEqual(node?.left?.left?.val, 4)
+            XCTAssertEqual(node?.left?.right?.val, nil)
+        }
+        XCTContext.runActivity(named: "1, 2, 3, 4, nil, 5, nil") { _ in
+            let node = BTree.buildTree(array: [1, 2, 3, 4, nil, 5, nil])
+            XCTAssertEqual(node?.val, 1)
+            XCTAssertEqual(node?.left?.val, 2)
+            XCTAssertEqual(node?.right?.val, 3)
+            XCTAssertEqual(node?.left?.left?.val, 4)
+            XCTAssertEqual(node?.left?.right?.val, nil)
+            XCTAssertEqual(node?.right?.left?.val, 5)
+            XCTAssertEqual(node?.right?.right?.val, nil)
+        }
+    }
 }
