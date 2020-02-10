@@ -9,20 +9,6 @@
 import XCTest
 
 class n21: XCTestCase {
-    
-    public class ListNode {
-        public var val: Int
-        public var next: ListNode?
-        public init(_ val: Int) {
-            self.val = val
-            self.next = nil
-        }
-        
-        public init(_ val: Int, next: ListNode) {
-            self.val = val
-            self.next = next
-        }
-    }
 
     func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         if l1 == nil { return l2 }
@@ -53,20 +39,20 @@ class n21: XCTestCase {
     }
 
     func testExample() {
-//        XCTContext.runActivity(named: "nil") { _ in
-//            let node1: ListNode? = nil
-//            let node2 = ListNode(3, next: ListNode(4))
-//            let node = mergeTwoLists(node1, node2)
-//            XCTAssertEqual(node?.val, 3)
-//            XCTAssertEqual(node?.next?.val, 4)
-//        }
-//        XCTContext.runActivity(named: "nil") { _ in
-//            let node1 = ListNode(3, next: ListNode(4))
-//            let node2: ListNode? = nil
-//            let node = mergeTwoLists(node1, node2)
-//            XCTAssertEqual(node?.val, 3)
-//            XCTAssertEqual(node?.next?.val, 4)
-//        }
+        XCTContext.runActivity(named: "nil") { _ in
+            let node1: ListNode? = nil
+            let node2 = ListNode(3, next: ListNode(4))
+            let node = mergeTwoLists(node1, node2)
+            XCTAssertEqual(node?.val, 3)
+            XCTAssertEqual(node?.next?.val, 4)
+        }
+        XCTContext.runActivity(named: "nil") { _ in
+            let node1 = ListNode(3, next: ListNode(4))
+            let node2: ListNode? = nil
+            let node = mergeTwoLists(node1, node2)
+            XCTAssertEqual(node?.val, 3)
+            XCTAssertEqual(node?.next?.val, 4)
+        }
         XCTContext.runActivity(named: "normal case") { _ in
             let node1 = ListNode(1, next: ListNode(2, next: ListNode(4)))
             let node2 = ListNode(1, next: ListNode(3, next: ListNode(4)))
