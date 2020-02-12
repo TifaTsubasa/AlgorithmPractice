@@ -162,7 +162,6 @@ class Sort: XCTestCase {
     }
     
     func quickSort(_ nums: inout [Int], l: Int, r: Int) {
-        if nums.count <= 1 { return }
         if l >= r { return }
         let pivot = partition(&nums, l: l, r: r)
         quickSort(&nums, l: l, r: pivot)
