@@ -41,6 +41,7 @@
 		D6ACDF1223C8B607007AE0F3 /* KMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACDF1123C8B607007AE0F3 /* KMP.swift */; };
 		D6B11E27238195C2007E6CB3 /* ArrayChapter4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B11E26238195C2007E6CB3 /* ArrayChapter4.swift */; };
 		D6F5116423F7E97B00129944 /* n226.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5116323F7E97B00129944 /* n226.swift */; };
+		D6F5116623F7EEF200129944 /* rn4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5116523F7EEF200129944 /* rn4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		D6ACDF1123C8B607007AE0F3 /* KMP.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = KMP.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D6B11E26238195C2007E6CB3 /* ArrayChapter4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayChapter4.swift; sourceTree = "<group>"; };
 		D6F5116323F7E97B00129944 /* n226.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = n226.swift; sourceTree = "<group>"; };
+		D6F5116523F7EEF200129944 /* rn4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rn4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				83BF642223F3B6C700E6B852 /* rn3.swift */,
+				D6F5116523F7EEF200129944 /* rn4.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				836D6CEF238F84C300E12100 /* LinkedList.swift in Sources */,
 				D6B11E27238195C2007E6CB3 /* ArrayChapter4.swift in Sources */,
 				8337E911237E92C000B85EDB /* ArrayChapter3.swift in Sources */,
+				D6F5116623F7EEF200129944 /* rn4.swift in Sources */,
 				83369730238526B2000247EC /* ArrayChapter5.swift in Sources */,
 				83BF63DC23F1569A00E6B852 /* n121.swift in Sources */,
 				832DD00123E7F77A00AF6CCF /* n146-LRU.swift in Sources */,
