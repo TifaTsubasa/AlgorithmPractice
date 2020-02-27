@@ -21,6 +21,12 @@ class TreeNode: CustomStringConvertible {
         self.left = nil
         self.right = nil
     }
+    
+    public init(val: Int, left: TreeNode?, right: TreeNode?) {
+        self.val = val
+        self.left = left
+        self.right = right
+    }
 }
 
 class BTree {
