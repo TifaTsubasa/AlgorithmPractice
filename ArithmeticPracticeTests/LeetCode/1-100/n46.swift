@@ -9,32 +9,34 @@
 import XCTest
 
 class n46: XCTestCase {
-    func permute(_ nums: [Int]) -> [[Int]] {
-        var res = [[Int]]()
-        
-        func backtrack(_ nums: [Int], tracker: inout [Int]) {
+  func permute(_ nums: [Int]) -> [[Int]] {
+    var res = [[Int]]()
     
-            if tracker.count == nums.count {
-                res.append(tracker)
-                return
-            }
-            
-            for num in nums {
-                if tracker.contains(num) {
-                    continue
-                }
-                tracker.append(num)
-                backtrack(nums, tracker: &tracker)
-                tracker.removeLast()
-            }
+    func backtrack(tracker: inout [Int]) {
+      if tracker.count == nums.count {
+        res.append(tracker)
+        return
+      }
+      
+      for num in nums {
+        if tracker.contains(num) {
+          continue
         }
-        var t = [Int]()
-        backtrack(nums, tracker: &t)
-
-        return res
+        
+        tracker.append(num)
+        backtrack(tracker: &tracker)
+        tracker.removeLast()
+      }
+      
     }
     
-    func testPermute() {
-        XCTAssertEqual(permute([1, 2]), [[1, 2], [2, 1]])
-    }
+    var tracker = [Int]()
+    backtrack(tracker: &tracker)
+    
+    return res
+  }
+  
+  func testPermute() {
+    XCTAssertEqual(permute([1, 2]), [[1, 2], [2, 1]])
+  }
 }
